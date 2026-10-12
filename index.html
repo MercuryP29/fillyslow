@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Fillyslow</title><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#4f46e5"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Fillyslow"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
+<style>
+:root{--bg:#f6f7fb;--cd:#fff;--tx:#1b1f2a;--mu:#6b7280;--pr:#4f46e5;--bd:#e5e7eb;--ok:#16a34a;--wn:#d97706;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1117;--cd:#181b24;--tx:#e8eaf0;--mu:#9aa1b0;--bd:#2a2e3a;--pr:#818cf8}}
+:root[data-theme="dark"]{--bg:#0f1117;--cd:#181b24;--tx:#e8eaf0;--mu:#9aa1b0;--bd:#2a2e3a;--pr:#818cf8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+html,body{min-height:100%}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:14px}
+h1,h2,h3{margin:0 0 10px}h2{font-size:20px}h3{font-size:16px}
+input,select,textarea,button{font:inherit;color:inherit}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);margin-bottom:10px}
+button{cursor:pointer;border:0;border-radius:8px;padding:10px 16px;background:var(--pr);color:#fff;font-weight:600}
+button.g{background:transparent;color:var(--pr);border:1px solid var(--bd)}button:disabled{opacity:.5;cursor:default}
+.auth{max-width:400px;margin:8vh auto;padding:16px}
+.shell{display:flex;min-height:100vh}
+nav{width:210px;background:var(--cd);border-right:1px solid var(--bd);padding:14px;flex-shrink:0}
+nav b{display:block;font-size:18px;margin-bottom:12px;color:var(--pr)}.lg{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--pr);color:#fff;margin-right:6px}
+nav a{display:block;padding:9px 10px;border-radius:8px;cursor:pointer;color:var(--tx)}nav a.on{background:var(--pr);color:#fff}
+main{flex:1;padding:16px;min-width:0;max-width:900px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{font-size:24px;font-weight:700}.mu{color:var(--mu);font-size:13px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:8px;border-bottom:1px solid var(--bd);white-space:nowrap}
+.tag{padding:2px 8px;border-radius:99px;font-size:12px;background:var(--bd)}.ok{color:var(--ok)}.wn{color:var(--wn)}
+.ph{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+.ph label{aspect-ratio:1;border:1px dashed var(--bd);border-radius:8px;display:grid;place-items:center;cursor:pointer;overflow:hidden;font-size:22px;color:var(--mu)}
+.ph img{width:100%;height:100%;object-fit:cover}.ph input{display:none}
+.chk{display:flex;gap:8px;align-items:center;margin-bottom:6px}.chk input{width:auto;margin:0}
+.chat{height:240px;overflow-y:auto;border:1px solid var(--bd);border-radius:8px;padding:8px;margin-bottom:8px}
+.m{max-width:85%;padding:7px 10px;border-radius:10px;margin:4px 0;background:var(--bg)}.m.u{margin-left:auto;background:var(--pr);color:#fff}
+.row{display:flex;gap:8px}.row input{margin:0}
+@media(max-width:700px){.shell{flex-direction:column}nav{width:100%;display:flex;overflow-x:auto;gap:4px;border-right:0;border-bottom:1px solid var(--bd)}nav b{display:none}nav a{white-space:nowrap}}
+:root{--rb:linear-gradient(90deg,#9333ea,#4f46e5,#2563eb,#16a34a,#eab308,#f97316,#ef4444);--c1:#9333ea;--c2:#4f46e5;--c3:#2563eb;--c4:#16a34a;--c5:#eab308;--c6:#f97316;--c7:#ef4444}
+body{border-top:5px solid;border-image:var(--rb) 1}
+button:not(.g),.lg,nav a.on{background:var(--rb)!important;color:#fff!important;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+button.g{color:var(--c3);border-color:var(--c3)}
+main h2::after{content:'';display:block;height:4px;width:80px;border-radius:4px;background:var(--rb);margin-top:6px}
+main .card{border-left:5px solid var(--c1)}
+main .card:nth-child(7n+1){border-left-color:var(--c1)}main .card:nth-child(7n+2){border-left-color:var(--c2)}main .card:nth-child(7n+3){border-left-color:var(--c3)}main .card:nth-child(7n+4){border-left-color:var(--c4)}main .card:nth-child(7n+5){border-left-color:var(--c5)}main .card:nth-child(7n+6){border-left-color:var(--c6)}main .card:nth-child(7n+7){border-left-color:var(--c7)}
+.grid .card:nth-child(1) .stat{color:var(--c1)}.grid .card:nth-child(2) .stat{color:var(--c3)}.grid .card:nth-child(3) .stat{color:var(--c4)}.grid .card:nth-child(4) .stat{color:var(--c6)}
+th:nth-child(7n+1){color:var(--c1)}th:nth-child(7n+2){color:var(--c3)}th:nth-child(7n+3){color:var(--c4)}th:nth-child(7n+4){color:var(--c6)}th:nth-child(7n+5){color:var(--c7)}
+nav a:not(.on):hover{background:var(--bd)}
+</style></head><body><div id="app"></div>
+<script>
+const KEY='sellerhub_v1';
+let S={user:null,listings:[],tickets:[],chat:[],mode:'',view:'dash',otp:null,admin:false};
+try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const $=s=>document.querySelector(s),esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// ---- Modular marketplace integration layer (mock adapters; swap with real APIs) ----
+const Platforms={
+ flipkart:{name:'Flipkart',publish:p=>mock(p,'FK')},
+ amazon:{name:'Amazon',publish:p=>mock(p,'AMZ')},
+ meesho:{name:'Meesho',publish:p=>mock(p,'MSH')},
+ myntra:{name:'Myntra',soon:true}
+};
+const mock=(p,pre)=>new Promise(r=>setTimeout(()=>r({ok:true,id:pre+'-'+Math.floor(Math.random()*90000+10000)}),700));
+const DATA={sales:'₹1,24,500',pending:7,
+ returns:[['RT-101','Cotton Kurti','Flipkart','Size issue','Pending'],['RT-102','Phone Case','Amazon','Damaged','Approved'],['RT-103','Saree','Meesho','Wrong item','Pending']],
+ claims:[['CL-21','RT-099','Flipkart','₹799','Under review'],['CL-22','RT-087','Meesho','₹450','Settled']],
+ promos:[['Boost Top Listing','₹199 / 7 days'],['Featured Banner','₹499 / 7 days'],['Search Ads','₹99 / day']]};
+const set=o=>{Object.assign(S,o);save();render()};
+function render(){
+ if(!S.user)return $('#app').innerHTML=authView();
+ const items=[['dash','Dashboard'],['list','Listing'],['ret','Manage Returns'],['clm','Return Claims'],['promo','Promotion / Ads'],['pay','Payment Gateway'],['sup','Customer Support'],['adm','Admin Panel']];
+ $('#app').innerHTML=`<div class="shell"><nav><b><span class="lg">F</span>Fillyslow</b>${items.map(i=>`<a class="${S.view==i[0]?'on':''}" onclick="set({view:'${i[0]}'})">${i[1]}</a>`).join('')}<a onclick="set({user:null,otp:null})">Logout</a></nav><main>${views[S.view]()}</main></div>`;
+ if(S.view=='sup'){const c=$('.chat');if(c)c.scrollTop=c.scrollHeight}
+}
+// ---- Auth ----
+let via='email';
+function authView(){
+ if(S.otp)return `<div class="auth card"><h2>Verify OTP</h2><p class="mu">OTP sent to ${esc(S.otp.to)}. Demo OTP: <b>123456</b></p><input id="otp" placeholder="Enter 6-digit OTP" inputmode="numeric"><button onclick="verify()">Verify & Register</button> <button class="g" onclick="set({otp:null})">Back</button></div>`;
+ return `<div class="auth card"><h2><span class="lg">F</span>Fillyslow</h2><p class="mu">Create your seller account</p><input id="nm" placeholder="Your name"><input id="bn" placeholder="Business name">
+ <select id="via" onchange="via=this.value;render()"><option value="email" ${via=='email'?'selected':''}>Verify with Email</option><option value="mobile" ${via=='mobile'?'selected':''}>Verify with Mobile</option></select>
+ <input id="ct" placeholder="${via=='email'?'Email address':'Mobile number'}"><button onclick="sendOtp()" style="width:100%">Send OTP</button></div>`;
+}
+function sendOtp(){const n=$('#nm').value.trim(),b=$('#bn').value.trim(),c=$('#ct').value.trim();if(!n||!b||!c)return alert('Please fill all fields');set({otp:{n,b,to:c}})}
+function verify(){if($('#otp').value!=='123456')return alert('Wrong OTP (use 123456 in demo)');const o=S.otp;set({otp:null,user:{name:o.n,biz:o.b,contact:o.to,sid:'SUP-'+Math.floor(1000+Math.random()*9000)}})}
+// ---- Views ----
+const tbl=(h,r)=>`<div class="tw"><table><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${r.map(x=>`<tr>${x.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`;
+const views={
+ dash:()=>`<h2>Welcome, ${esc(S.user.name)}</h2><p class="mu">${esc(S.user.biz)} · Support ID ${S.user.sid}</p><div class="grid"><div class="card"><div class="mu">Total Sales</div><div class="stat">${DATA.sales}</div></div><div class="card"><div class="mu">Pending Orders</div><div class="stat">${DATA.pending}</div></div><div class="card"><div class="mu">Listings</div><div class="stat">${S.listings.length}</div></div><div class="card"><div class="mu">Open Tickets</div><div class="stat">${S.tickets.filter(t=>t.st!='Closed').length}</div></div></div><p class="mu">Sales and orders shown are demo data.</p>`,
+ list:()=>`<h2>New Listing</h2><div class="card"><div class="ph">${[0,1,2,3].map(i=>`<label id="p${i}">+<input type="file" accept="image/*" onchange="pic(this,${i})"></label>`).join('')}</div>
+ <input id="ln" placeholder="Product name"><div class="row"><input id="lp" type="number" placeholder="Price (₹)"><input id="ls" type="number" placeholder="Stock"></div><input id="lc" placeholder="Category"><textarea id="ld" rows="3" placeholder="Description"></textarea>
+ <h3>Publish on</h3>${Object.entries(Platforms).map(([k,p])=>`<div class="chk"><input type="checkbox" id="pf_${k}" ${p.soon?'disabled':''}><label for="pf_${k}">${p.name} ${p.soon?'<span class="tag">Coming Soon</span>':''}</label></div>`).join('')}
+ <button id="pb" onclick="publish()">Publish Listing</button><div id="pr" class="mu" style="margin-top:8px"></div></div>
+ <h3>Your listings</h3>${S.listings.length?tbl(['Product','Price','Platforms'],S.listings.map(l=>[l.n,'₹'+l.p,l.pf.join(', ')])):'<p class="mu">No listings yet.</p>'}`,
+ ret:()=>`<h2>Manage Returns</h2><div class="card">${tbl(['ID','Product','Platform','Reason','Status'],DATA.returns)}</div>`,
+ clm:()=>`<h2>Return Claims</h2><div class="card">${tbl(['Claim','Return','Platform','Amount','Status'],DATA.claims)}</div>`,
+ promo:()=>`<h2>Promotion / Ads</h2>${DATA.promos.map(p=>`<div class="card row" style="justify-content:space-between;align-items:center"><div><b>${p[0]}</b><div class="mu">${p[1]}</div></div><button onclick="alert('Boost activated (demo)')">Boost</button></div>`).join('')}`,
+ pay:()=>`<h2>Payment Gateway</h2><div class="card"><p>Connect a gateway to receive payouts and pay for promotions.</p><div class="chk"><input type="radio" name="g" checked> Razorpay</div><div class="chk"><input type="radio" name="g"> PayU</div><div class="chk"><input type="radio" name="g"> Cashfree</div><button onclick="alert('Gateway connected (demo)')">Connect</button></div>`,
+ sup:()=>`<h2>Customer Support</h2><p class="mu">Your Support ID: <b>${S.user.sid}</b></p>
+ <div class="card"><h3>AI Assistant</h3><div class="chat">${S.chat.length?S.chat.map(m=>`<div class="m ${m.u?'u':''}">${esc(m.t)}</div>`).join(''):'<div class="m">Hi! Ask me about listings, returns, payments or promotions.</div>'}</div><div class="row"><input id="ci" placeholder="Type your question…" onkeydown="if(event.key=='Enter')ask()"><button onclick="ask()">Send</button></div></div>
+ <div class="card"><h3>Create Ticket</h3><input id="ts" placeholder="Subject"><textarea id="tb" rows="3" placeholder="Describe your issue"></textarea><button onclick="mk($('#ts').value,$('#tb').value)">Submit Ticket</button></div>
+ <div class="card"><h3>My Tickets</h3>${S.tickets.length?tbl(['ID','Subject','Status'],S.tickets.map(t=>[t.id,t.s,t.st])):'<p class="mu">No tickets yet.</p>'}</div>
+ <div class="card"><h3>WhatsApp Chatbot <span class="tag">Coming Soon</span></h3></div>`,
+ adm:()=>`<h2>Admin Panel · Tickets</h2><p class="mu">Demo view. In production this is a separate protected admin login; new tickets also go out by email.</p><div class="card tw"><table><tr><th>ID</th><th>Seller</th><th>Support ID</th><th>Subject</th><th>Status</th></tr>${S.tickets.map((t,i)=>`<tr><td>${t.id}</td><td>${esc(S.user.biz)}</td><td>${S.user.sid}</td><td>${esc(t.s)}</td><td><select style="margin:0" onchange="S.tickets[${i}].st=this.value;save()">${['Open','In Progress','Closed'].map(o=>`<option ${o==t.st?'selected':''}>${o}</option>`).join('')}</select></td></tr>`).join('')||'<tr><td colspan="5" class="mu">No tickets.</td></tr>'}</table></div>`
+};
+// ---- Actions ----
+function pic(el,i){const f=el.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{$('#p'+i).innerHTML=`<img src="${r.result}"><input type="file" accept="image/*" onchange="pic(this,${i})">`};r.readAsDataURL(f)}
+async function publish(){
+ const n=$('#ln').value.trim(),p=$('#lp').value;if(!n||!p)return alert('Product name and price are required');
+ const pf=Object.keys(Platforms).filter(k=>$('#pf_'+k)&&$('#pf_'+k).checked);if(!pf.length)return alert('Select at least one platform');
+ $('#pb').disabled=true;$('#pr').textContent='Publishing…';const out=[];
+ for(const k of pf){const r=await Platforms[k].publish({n,p});out.push(`${Platforms[k].name}: live (${r.id})`)}
+ S.listings.unshift({n,p,pf:pf.map(k=>Platforms[k].name)});save();render();$('#pr').innerHTML='';alert(out.join('\n'));
+}
+function mk(s,b){if(!s.trim())return alert('Please add a subject');const t={id:'TKT-'+Math.floor(1000+Math.random()*9000),s:s.trim(),b,st:'Open'};S.tickets.unshift(t);save();return t}
+const FAQ=[[/return|refund/,'Go to Manage Returns to see pending returns and Return Claims to file a claim.'],[/list|product/,'Open Listing, add photos and details, then tick the platforms to publish on.'],[/pay|payout/,'Use Payment Gateway to connect Razorpay, PayU or Cashfree for payouts.'],[/promo|ad|boost/,'Promotion / Ads lets you boost listings with a few clicks.']];
+function ask(){
+ const v=$('#ci').value.trim();if(!v)return;S.chat.push({u:1,t:v});let r;
+ if(S.mode=='q'){const t=mk(v.slice(0,50),v);S.mode='';r=`Ticket ${t.id} created. Our team will get back to you.`}
+ else if(/^(yes|haan|ha|ticket)/i.test(v)||/ticket/i.test(v)){S.mode='q';r='Sure. Please type your query and I will create the ticket.'}
+ else{const f=FAQ.find(x=>x[0].test(v.toLowerCase()));r=(f?f[1]:'I am not sure about that.')+' Want to create a ticket? Reply "yes".'}
+ S.chat.push({t:r});save();render();
+}
+render();
+</script><script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});</script></body></html>
